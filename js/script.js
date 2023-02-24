@@ -32,12 +32,16 @@ for (let i = 1; i <= 100; i++) {
     newElement.innerHTML = "FizzBuzz";
     newElement.classList.add("bold");
     newElement.style.backgroundColor = "#f0466f";
-    
+
+    console.log(i + " " + newElement.innerHTML);
+
   } else if (i % 3 == 0) {
       
     newElement.innerHTML = "Fizz";
     newElement.classList.add("bold");
     newElement.style.backgroundColor = "#0cd6a1";
+
+    console.log(i + " " + newElement.innerHTML);
 
   } else if (i % 5 == 0) {
 
@@ -45,9 +49,13 @@ for (let i = 1; i <= 100; i++) {
     newElement.classList.add("bold");
     newElement.style.backgroundColor = "#ffd166";
 
+    console.log(i + " " + newElement.innerHTML);
+
   } else {
 
     newElement.style.backgroundColor = "#1389b2";
+
+    console.log(i);
 
   }
 }
