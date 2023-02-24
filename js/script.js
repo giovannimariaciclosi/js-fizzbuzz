@@ -11,3 +11,42 @@ la stringa corretta da mostrare.
 BONUS 2: Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna.
 */
+
+
+let listContainerElement = document.getElementById("list");
+
+for (let i = 1; i <= 100; i++) {
+  
+  // creo un elemento di tag <div>
+  let newElement = document.createElement('div');
+  
+  // attribuisco listContainerElement come GENITORE di newElement
+  listContainerElement.append(newElement);
+
+  // cambio il valore interno dentro l'elemento
+  newElement.innerHTML = i;
+
+    
+  if (i % 3 == 0 && 1 % 5 == 0) {
+
+    newElement.innerHTML = "FizzBuzz";
+
+    newElement.style.color = "red";
+  } else if (i % 3 == 0) {
+      
+    newElement.innerHTML = "Fizz";
+    newElement.classList.add("bold");
+    newElement.style.backgroundColor = "#0cd6a1";
+
+  } else if (i % 5 == 0) {
+
+    newElement.innerHTML = "Buzz";
+    newElement.classList.add("bold");
+    newElement.style.backgroundColor = "#ffd166";
+
+  } else {
+
+    newElement.style.backgroundColor = "#1389b2";
+
+  }
+}
