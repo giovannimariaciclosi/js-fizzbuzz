@@ -27,11 +27,12 @@ for (let i = 1; i <= 100; i++) {
   newElement.innerHTML = i;
 
     
-  if (i % 3 == 0 && 1 % 5 == 0) {
+  if (i % 3 == 0 && i % 5 == 0) {
 
     newElement.innerHTML = "FizzBuzz";
-
-    newElement.style.color = "red";
+    newElement.classList.add("bold");
+    newElement.style.backgroundColor = "#f0466f";
+    
   } else if (i % 3 == 0) {
       
     newElement.innerHTML = "Fizz";
